@@ -1,11 +1,11 @@
 function StringCalc(input){
     if(!input || input === '')
         return 0;
-
-    if(input.substr(0,2) == "//")
+    var regexpResult = input.match(/^\/\/(.*)\n.*/);
+    if(!!regexpResult)
     {
-        var customDelimiter = input.substr(2,1);
-        input = input.substr(4);
+        var customDelimiter = regexpResult[1];
+        input = input.substr(3+customDelimiter.length);
         input = input.replace(customDelimiter, ',');
     }
 

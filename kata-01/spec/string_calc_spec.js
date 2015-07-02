@@ -50,6 +50,7 @@ describe("String calculator", function(){
     describe("when custome delimiter is set by //[delimiter]\\n", function(){
         it("should work", function(){
             expect(StringCalc("//;\n1;2")).toEqual(3);
+            expect(StringCalc("//;;\n1;;2")).toEqual(3);
         });
     });
 });

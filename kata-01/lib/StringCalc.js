@@ -1,5 +1,5 @@
 function StringCalc(value){
-    if(value === '')
+    if(!value || value === '')
         return 0;
     var array = value.split(',');
     var sum = 0;

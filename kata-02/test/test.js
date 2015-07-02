@@ -10,6 +10,6 @@ describe('FizzBuzz', function(){
         FizzBuzz(3).should.equal('Fizz');
     });
     it("should return Buzz when input mod 5 == 0", function(){
-        FizzBuzz(3).should.equal('Buzz');
+        FizzBuzz(5).should.equal('Buzz');
     });
 });

@@ -2,10 +2,10 @@ function StringCalc(input){
     if(!input || input === '')
         return 0;
 
-    if(input.substr(0,1) == "//")
+    if(input.substr(0,2) == "//")
     {
         var customDelimiter = input.substr(2,1);
-        console.log('delim', customDelimiter);
+        input = input.substr(4);
         input = input.replace(customDelimiter, ',');
     }
 

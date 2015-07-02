@@ -1,7 +1,7 @@
 function FizzBuzz(input){
     var temp = [];
     if (input % 3 === 0) temp.push('Fizz');
-    if (input % 5 === 0) temp = ('Buzz');
+    if (input % 5 === 0) temp.push('Buzz');
     return (temp.length == 0) ? input : temp.join(' ');
 }
 

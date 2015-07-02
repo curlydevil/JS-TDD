@@ -26,4 +26,4 @@ TempWidget.prototype.render = function(){
 TempWidget.prototype.update = function(){
     this.request();
     this.render();
-}
+};

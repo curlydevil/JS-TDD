@@ -15,7 +15,7 @@ TempWidget.prototype.render = function(){
     this.promiseData.done(function(data){
         console.log('data', data);
 
-        var widget = $('<div class="temp-widget"><div class="temp-value">'+ data.temperature +' C</div></div>');
+        var widget = $('<div class="temp-widget"><div class="temp-value">'+ data.temperature +' C</div><button class="update"></button></div>');
         widget.appendTo(self.$parent);
     });
 };

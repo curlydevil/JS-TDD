@@ -35,15 +35,25 @@ describe("TempWidget", function(){
         jasmine.Ajax.requests.mostRecent().respondWith(fakeSuccess);
     };
 
+    describe("when widget is initialized", function(){
+        it("should fetch temperature from server", function(){
+            expect(jasmine.Ajax.requests.mostRecent().url).toEqual("/api/temperature");
+        });
+    });
+
     it('should display temperature in div with class .temp-value', function(){
         fakeAjax(22);
         widget.render();
         expect($("div.temp-value").text()).toEqual("22 C");
     });
 
-    describe("when widget is initialized", function(){
-        it("should fetch temperature from server", function(){
-            expect(jasmine.Ajax.requests.mostRecent().url).toEqual("/api/temperature");
-        });
+    it("when user clicks on button widhet should be updated", function(){
+        fakeAjax(22);
+        widget.render();
+        expect($("div.temp-value").text()).toEqual("22 C");
+
+        $parent.find("button.update").click();
+        fakeAjax(5);
+        expect($("div.temp-value").text()).toEqual("5 C");
     });
 });

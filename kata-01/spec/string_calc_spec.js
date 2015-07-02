@@ -1,11 +1,14 @@
+ /* brackets-xunit: includes=../lib/StringCalc.js */
+
 describe("String calculator", function(){
 
-    var StringCalc = require("../lib/StringCalc.js");
+    if(require !== undefined)
+        var StringCalc = require("../lib/StringCalc.js");
 
     it("should exist", function(){
         expect(StringCalc).toBeTruthy();
     });
-    
+
     it("should return some value", function(){
         expect(StringCalc()).toBeDefined();
     });

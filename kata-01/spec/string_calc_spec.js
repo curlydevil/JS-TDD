@@ -28,6 +28,22 @@ describe("String calculator", function(){
     describe("when input is a pair of values with ',' as delimiter", function(){
         it("should return sum of them", function(){
             expect(StringCalc('1,2')).toEqual(3);
+            expect(StringCalc('3,4')).toEqual(7);
+            expect(StringCalc('-3,-4')).toEqual(-7);
+            expect(StringCalc('-3,4')).toEqual(1);
+        });
+    });
+
+    describe("when number is unlimited number of values with ',' as delimiter",function(){
+        it("should return a sum of them", function(){
+            expect(StringCalc('1,2,3,4,5,6,7,8,9')).toEqual(45);
+            expect(StringCalc('-1,-2,-3,-4,-5,-6,-7,-8,-9')).toEqual(-45);
+        });
+    });
+
+    describe("when delimiter is '\\n'", function(){
+        it("should work", function(){
+            expect(StringCalc("1\n2")).toEqual(3);
         });
     });
 

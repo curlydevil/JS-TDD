@@ -37,6 +37,7 @@ describe("TempWidget", function(){
 
     it('should display temperature in div with class .temp-value', function(){
         fakeAjax(22);
+        widget.render();
         expect($("div.temp-value").text()).toEqual("22 C");
     });
 

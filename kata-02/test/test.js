@@ -16,9 +16,9 @@ describe('FizzBuzz', function(){
         FizzBuzz(10).should.equal('Buzz');
     });
 
-    /*it("should return Fizz Buzz when input mod 5 == 0 and input mod 3 == 0", function(){
+    it("should return Fizz Buzz when input mod 5 == 0 and input mod 3 == 0", function(){
         FizzBuzz(15).should.equal('Fizz Buzz');
-    });*/
+    });
 
 
     it("should return input in all other cases", function(){

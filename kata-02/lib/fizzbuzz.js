@@ -1,6 +1,7 @@
 function FizzBuzz(input){
-    if (input % 3 === 0) return 'Fizz';
-    if (input % 5 === 0) return 'Buzz';
+    var temp = input;
+    if (input % 3 === 0) temp = 'Fizz';
+    if (input % 5 === 0) temp = 'Buzz';
     else return input;
 }
 

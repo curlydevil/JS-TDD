@@ -20,7 +20,6 @@ describe('FizzBuzz', function(){
         FizzBuzz(15).should.equal('Fizz Buzz');
     });
 
-
     it("should return input in all other cases", function(){
         FizzBuzz(2).should.equal(2);
         FizzBuzz(7).should.equal(7);

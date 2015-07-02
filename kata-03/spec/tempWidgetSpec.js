@@ -21,4 +21,8 @@ describe("TempWidget", function(){
     it("should create div element with class .temp-widget", function(){
         expect($("div.temp-widget").size()).toEqual(1);
     });
+
+    it('should display temperature in div with class .temp-value', function(){
+        expect($("div.temp-value").text()).toEqual("22 C");
+    });
 });

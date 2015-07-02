@@ -16,6 +16,14 @@ TempWidget.prototype.render = function(){
         console.log('data', data);
 
         var widget = $('<div class="temp-widget"><div class="temp-value">'+ data.temperature +' C</div><button class="update"></button></div>');
-        widget.appendTo(self.$parent);
+        self.$parent.html(widget);
+        self.$parent.find("button.update").on("click", function(){
+            self.update();
+        });
     });
 };
+
+TempWidget.prototype.update = function(){
+    this.request();
+    this.render();
+}

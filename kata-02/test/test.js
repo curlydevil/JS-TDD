@@ -11,7 +11,7 @@ describe('FizzBuzz', function(){
     });
 
     it("should return input when input mod 5 != 0", function(){
-        FizzBuzz(2).should.equal(2);
+        FizzBuzz(7).should.equal(7);
     });
 
     it("should return Fizz when input mod 3 == 0", function(){

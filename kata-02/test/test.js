@@ -6,7 +6,11 @@ describe('FizzBuzz', function(){
         FizzBuzz.should.be;
     });
 
-    it("should return input when input mod 3 != 0 then", function(){
+    it("should return input when input mod 3 != 0", function(){
+        FizzBuzz(2).should.equal(2);
+    });
+
+    it("should return input when input mod 5 != 0", function(){
         FizzBuzz(2).should.equal(2);
     });
 

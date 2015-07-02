@@ -20,6 +20,7 @@ describe("String calculator", function(){
        it("should return same value as number", function(){
            expect(StringCalc('5')).toEqual(5);
            expect(StringCalc('4')).toEqual(4);
+           expect(StringCalc('-4')).toEqual(-4);
        });
 
     });

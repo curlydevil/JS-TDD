@@ -21,6 +21,7 @@ describe("String calculator", function(){
            expect(StringCalc('5')).toEqual(5);
            expect(StringCalc('4')).toEqual(4);
            expect(StringCalc('-4')).toEqual(-4);
+           expect(StringCalc('0')).toEqual(0);
        });
 
     });

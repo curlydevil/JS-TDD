@@ -23,7 +23,12 @@ describe("String calculator", function(){
            expect(StringCalc('-4')).toEqual(-4);
            expect(StringCalc('0')).toEqual(0);
        });
+    });
 
+    describe("when input is a pair of values with ',' as delimiter", function(){
+        it("should return sum of them", function(){
+            expect(StringCalc('1,2')).toEqual(3);
+        });
     });
 
 });

@@ -1,7 +1,7 @@
-function StringCalc(value){
-    if(!value || value === '')
+function StringCalc(input){
+    if(!input || input === '')
         return 0;
-    var array = value.split(',');
+    var array = input.split(',');
     var sum = 0;
     for(var i = 0; i< array.length; i++){
         sum +=(+array[i]);

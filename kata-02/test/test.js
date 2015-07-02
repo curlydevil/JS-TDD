@@ -7,6 +7,6 @@ describe('FizzBuzz', function(){
     });
 
     it("should return Fizz when input mod 3 equals 0", function(){
-        FizzBuzz(3).should.be('Fizz');
+        FizzBuzz(3).should.equal('Fizz');
     });
 });

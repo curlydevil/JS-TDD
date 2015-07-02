@@ -1,7 +1,7 @@
 function StringCalc(value){
     if(value === '')
         return 0;
-    else return 5;
+    else return +value;
 }
 
 module.exports = StringCalc;

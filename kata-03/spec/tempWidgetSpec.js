@@ -7,10 +7,9 @@ describe("TempWidget", function(){
 
     beforeEach(function(){
         $parent = $('<div class="test-parent"></div>').appendTo('body');
-        widget = new TempWidget($parent);
     });
 
-
-
-
+    it('tempWidget should exist', function(){
+        expect(TempWidget).toBeDefined();
+    });
 });
